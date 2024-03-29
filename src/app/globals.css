@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* global css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: "poppins", sans-serif;
+}
+
+/* for the a link onClick tick */
+
+.menu-effect {
+  left: -0.75rem;
+  top: 0.125rem;
+  z-index: -10;
+  width: 2rem;
+  border-radius: 0.5rem;
+  background-color: #1c93e2;
+  transition-duration: 0.5s;
+  position: absolute;
+}
+
+/* scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
