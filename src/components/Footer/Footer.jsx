@@ -10,10 +10,10 @@ const Footer = () => {
         <div className="container m-auto p-10 bg:white">
           <div className="container m-auto flex flex-col sm:flex-row justify-around items-center">
             <div>
-              <h2 className="text-[#223740] mb-2 text-[1rem] md:text-[1.8rem] font-semibold">
-                COCAMEDLAB ©{" "}
+              <h2 className="text-[#47aede] mb-2 text-[1rem] md:text-[1.8rem] font-semibold">
+                COCAMEDLAB {" "} 
                 <span className="text-[#223740] mb-2 text-[.75rem] md:text-[1.4rem] font-semibold">
-                  {currentYear} All Right Reserved
+                  {currentYear} ©  All Right Reserved
                 </span>
               </h2>
             </div>
