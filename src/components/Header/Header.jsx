@@ -69,11 +69,27 @@ const Header = () => {
                   <Link
                     href="#products"
                     className={`menu-item ${
-                      selectedIndex === 2 ? "text-black" : "text-[#666d47]"
+                      selectedIndex === 1 ? "text-black" : "text-[#666d47]"
                     } group-hover:text-gray-800`}
                     onClick={() => setSelectedIndex(1)}
                   >
                     Products
+                  </Link>
+                </li>
+                <li className=" group text-2xl relative font-bold">
+                  {selectedIndex === 2 ? (
+                    <span className="menu-effect transform opacity-100 -rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  ) : (
+                    <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  )}
+                  <Link
+                    href="#about"
+                    className={`menu-item ${
+                      selectedIndex === 2 ? "text-black" : "text-[#666d47]"
+                    } group-hover:text-gray-800`}
+                    onClick={() => setSelectedIndex(2)}
+                  >
+                    About
                   </Link>
                 </li>
                 <li className=" group text-2xl relative font-bold">
@@ -83,27 +99,11 @@ const Header = () => {
                     <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
                   )}
                   <Link
-                    href="#about"
-                    className={`menu-item ${
-                      selectedIndex === 4 ? "text-black" : "text-[#666d47]"
-                    } group-hover:text-gray-800`}
-                    onClick={() => setSelectedIndex(3)}
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className=" group text-2xl relative font-bold">
-                  {selectedIndex === 0 ? (
-                    <span className="menu-effect transform opacity-100 -rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
-                  ) : (
-                    <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
-                  )}
-                  <Link
                     href="#contact"
                     className={`menu-item ${
-                      selectedIndex === 0 ? "text-black" : "text-[#666d47]"
+                      selectedIndex === 3 ? "text-black" : "text-[#666d47]"
                     } group-hover:text-gray-800`}
-                    onClick={() => setSelectedIndex(2)}
+                    onClick={() => setSelectedIndex(3)}
                   >
                     contact
                   </Link>
@@ -139,7 +139,7 @@ const Header = () => {
               </Link>
             </li>
             <li className=" group text-2xl relative font-bold">
-              {selectedIndex === 0 ? (
+              {selectedIndex === 1 ? (
                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
               ) : (
                 <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
@@ -147,7 +147,7 @@ const Header = () => {
               <Link
                 href="#products"
                 className={`menu-item ${
-                  selectedIndex === 0 ? "text-black" : "text-[#666d47]"
+                  selectedIndex === 1 ? "text-black" : "text-[#666d47]"
                 } text-[#666d47] group-hover:text-gray-800`}
                 onClick={() => setSelectedIndex(1)}
               >
@@ -155,7 +155,7 @@ const Header = () => {
               </Link>
             </li>
             <li className=" group text-2xl relative font-bold">
-              {selectedIndex === 0 ? (
+              {selectedIndex === 2 ? (
                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
               ) : (
                 <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
@@ -163,15 +163,15 @@ const Header = () => {
               <Link
                 href="#about"
                 className={`menu-item ${
-                  selectedIndex === 0 ? "text-black" : "text-[#666d47]"
+                  selectedIndex === 2 ? "text-black" : "text-[#666d47]"
                 } group-hover:text-gray-800`}
-                onClick={() => setSelectedIndex(3)}
+                onClick={() => setSelectedIndex(2)}
               >
                 About
               </Link>
             </li>
             <li className=" group text-2xl relative font-bold">
-              {selectedIndex === 0 ? (
+              {selectedIndex === 3 ? (
                 <span className="menu-effect transform opacity-100 -rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
               ) : (
                 <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
@@ -179,9 +179,9 @@ const Header = () => {
               <Link
                 href="#contact"
                 className={`menu-item ${
-                  selectedIndex === 0 ? "text-black" : "text-[#666d47]"
+                  selectedIndex === 3 ? "text-black" : "text-[#666d47]"
                 } text-[#666d47] group-hover:text-gray-800`}
-                onClick={() => setSelectedIndex(2)}
+                onClick={() => setSelectedIndex(3)}
               >
                 contact
               </Link>
