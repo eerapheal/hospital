@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
@@ -41,10 +40,84 @@ const Header = () => {
           boxShadow: isScrolled ? "#48afde 2px 2px 2px 2px" : "",
         }}
       >
+        <nav className="top-[98px] lg:invisible">
+          {isScrolled ? (
+            <div className="absolute top-[100px] bg-[#f3f1f1] h-20 w-full">
+              <ul className="flex justify-around items-center h-24">
+                <li className=" group text-2xl relative font-bold">
+                  {selectedIndex === 0 ? (
+                    <span className="menu-effect transform opacity-100 -rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  ) : (
+                    <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  )}
+                  <Link
+                    href="#home"
+                    className={`menu-item ${
+                      selectedIndex === 0 ? "text-black" : "text-[#666d47]"
+                    } group-hover:text-gray-800`}
+                    onClick={() => setSelectedIndex(0)}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className=" group text-2xl relative font-bold">
+                  {selectedIndex === 1 ? (
+                    <span className="menu-effect transform opacity-100 -rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  ) : (
+                    <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  )}
+                  <Link
+                    href="#products"
+                    className={`menu-item ${
+                      selectedIndex === 2 ? "text-black" : "text-[#666d47]"
+                    } group-hover:text-gray-800`}
+                    onClick={() => setSelectedIndex(1)}
+                  >
+                    Products
+                  </Link>
+                </li>
+                <li className=" group text-2xl relative font-bold">
+                  {selectedIndex === 3 ? (
+                    <span className="menu-effect transform opacity-100 -rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  ) : (
+                    <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  )}
+                  <Link
+                    href="#about"
+                    className={`menu-item ${
+                      selectedIndex === 4 ? "text-black" : "text-[#666d47]"
+                    } group-hover:text-gray-800`}
+                    onClick={() => setSelectedIndex(3)}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li className=" group text-2xl relative font-bold">
+                  {selectedIndex === 0 ? (
+                    <span className="menu-effect transform opacity-100 -rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  ) : (
+                    <span className="menu-effect transform opacity-100 rotate-12 group-hover:rotate-12  group-hover:opacity-100"></span>
+                  )}
+                  <Link
+                    href="#contact"
+                    className={`menu-item ${
+                      selectedIndex === 0 ? "text-black" : "text-[#666d47]"
+                    } group-hover:text-gray-800`}
+                    onClick={() => setSelectedIndex(2)}
+                  >
+                    contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            ""
+          )}
+        </nav>
         <nav className=" flex justify-between  flex-row items-center h-24 invisible lg:visible xl:max-w-4xl 2xl:max-w-7xl m-auto">
           <Link
             href="#home"
-            className="menu-item text-2xl uppercase font-bold text-[#47aede] py-2 px-5 transition-all duration-400 ease-in-out md:py-2 lg:py-3 lg:px-5 hover:text-white hover:bg-[#223740] hover:show-lg transform hover:translate-y-1"
+            className="menu-item text-2xl uppercase font-bold text-[#47aede] py-2 px-5 transition-all duration-400 ease-in-out md:py-2 lg:py-3 lg:px-5 hover:text-white hover:bg-[#223740] hover:show-lg transform hover:translate-y-1 hover:rounded"
           >
             cocamedlab
           </Link>
@@ -58,8 +131,8 @@ const Header = () => {
               <Link
                 href="#home"
                 className={`menu-item ${
-                  selectedIndex === 0 ? "text-black" : ""
-                } text-[#666d47] group-hover:text-gray-800`}
+                  selectedIndex === 0 ? "text-black" : "text-[#666d47]"
+                }  group-hover:text-gray-800`}
                 onClick={() => setSelectedIndex(0)}
               >
                 Home
@@ -74,7 +147,7 @@ const Header = () => {
               <Link
                 href="#products"
                 className={`menu-item ${
-                  selectedIndex === 0 ? "text-black" : ""
+                  selectedIndex === 0 ? "text-black" : "text-[#666d47]"
                 } text-[#666d47] group-hover:text-gray-800`}
                 onClick={() => setSelectedIndex(1)}
               >
@@ -90,8 +163,8 @@ const Header = () => {
               <Link
                 href="#about"
                 className={`menu-item ${
-                  selectedIndex === 0 ? "text-black" : ""
-                } text-[#666d47] group-hover:text-gray-800`}
+                  selectedIndex === 0 ? "text-black" : "text-[#666d47]"
+                } group-hover:text-gray-800`}
                 onClick={() => setSelectedIndex(3)}
               >
                 About
@@ -106,7 +179,7 @@ const Header = () => {
               <Link
                 href="#contact"
                 className={`menu-item ${
-                  selectedIndex === 0 ? "text-black" : ""
+                  selectedIndex === 0 ? "text-black" : "text-[#666d47]"
                 } text-[#666d47] group-hover:text-gray-800`}
                 onClick={() => setSelectedIndex(2)}
               >
@@ -182,7 +255,7 @@ const Header = () => {
           ) : (
             <Link
               href="#home"
-              className="menu-item text-2xl uppercase font-bold  text-[#47aede] transition-all duration-400 ease-in-out hover:text-white hover:bg-[#223740] hover:show-lg transform hover:translate-y-1"
+              className="menu-item text-2xl uppercase font-bold  text-[#47aede] transition-all duration-400 ease-in-out hover:text-white hover:bg-[#223740] hover:p-5 hover:show-lg transform hover:translate-y-1"
             >
               cocamedlab
             </Link>
